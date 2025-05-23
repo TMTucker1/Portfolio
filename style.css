@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -525,51 +526,65 @@ header > h2 {
   .contact-section {
     padding: 18px 6px;
     border-radius: 0;
-    max-width: 100vw;
-  }
-
-  .skills-list {
+    max-width: 100vw;0;
+  } left: 0;
+    right: 0;
+  .skills-list {one;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 8px;g: border-box;
   }
 
-  .hero-tiles {
+  .hero-tiles {{
     flex-direction: column;
-    gap: 18px;
+    gap: 18px;s: center;
     align-items: center;
   }
 
   .hero-tiles .project-tile {
-    max-width: 100%;
+    max-width: 100%;column;
     width: 100%;
-    min-width: 0;
+    min-width: 0;center;
     padding: 18px 10px;
   }
-
+  .hero-tiles .project-tile {
   .contact-flex-row {
     flex-direction: column;
-    gap: 24px;
+    gap: 24px; 0;
     align-items: stretch;
   }
 
   .my-contact-details,
-  .contact-form {
+  .contact-form {n: column;
     max-width: 100%;
-    min-width: 0;
+    min-width: 0;stretch;
     width: 100%;
     padding: 16px 8px;
+  }my-contact-details,
+  .contact-form {
+  .main-nav {00%;
+    left: 0;
+    right: 0;100%;
+    transform: none;px 8px;
+    width: 100%;
+    border-radius: 0;
   }
-
+ flex-direction: column;
   .main-nav ul {
     flex-direction: column;
     gap: 0;
     padding: 0;
-  }
-  .main-nav li {
-    border-bottom: 1px solid #eee;
-  }
-  .main-nav a {
+  } border-bottom: 1px solid #eee;
+  .main-nav li { }
+
+
+
+
+
+
+
+
+}  }    text-align: center;    display: block;    padding: 14px 0;  .main-nav a {  }    border-bottom: 1px solid #eee;  .main-nav a {
     padding: 14px 0;
     display: block;
     text-align: center;
