@@ -422,3 +422,79 @@ header > h2 {
     color: #555;
     font-size: 1em;
 }
+
+.hero-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.hero-tiles .project-tile {
+    flex: 1 1 200px;
+    min-width: 200px;
+    max-width: 260px;
+    background: #f4f4f4;
+    border: 2px solid #00796b;
+    border-radius: 14px;
+    padding: 28px 18px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.hero-tiles .project-tile h3 {
+    margin: 0 0 8px 0;
+    color: #00796b;
+    font-size: 1.15em;
+}
+
+.hero-tiles .project-tile p {
+    margin: 0;
+    color: #555;
+    font-size: 1em;
+}
+
+.hero-tiles .project-tile:hover {
+    border-color: #ff22b2;
+    box-shadow: 0 4px 16px rgba(255,34,178,0.12);
+    transform: translateY(-4px) scale(1.03);
+}
+
+.main-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(66,38,101,0.06);
+    border-bottom: 2px solid #422665;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    display: block;
+    padding: 16px 20px;
+    text-decoration: none;
+    color: #422665;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.2s;
+}
+
+.main-nav a:hover {
+    color: #ff22b2;
+}
