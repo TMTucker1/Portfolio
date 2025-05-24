@@ -526,65 +526,67 @@ header > h2 {
   .contact-section {
     padding: 18px 6px;
     border-radius: 0;
-    max-width: 100vw;0;
-  } left: 0;
+    max-width: 100%;
+    width: 100%;
+    margin: 20px 0 0 0;
+    left: 0;
     right: 0;
-  .skills-list {one;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;g: border-box;
+    transform: none;
+    box-sizing: border-box;
   }
 
-  .hero-tiles {{
+  .skills-list {
     flex-direction: column;
-    gap: 18px;s: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .hero-tiles {
+    flex-direction: column;
+    gap: 18px;
     align-items: center;
   }
 
   .hero-tiles .project-tile {
-    max-width: 100%;column;
+    max-width: 100%;
     width: 100%;
-    min-width: 0;center;
+    min-width: 0;
     padding: 18px 10px;
   }
-  .hero-tiles .project-tile {
+
   .contact-flex-row {
     flex-direction: column;
-    gap: 24px; 0;
+    gap: 24px;
     align-items: stretch;
   }
 
   .my-contact-details,
-  .contact-form {n: column;
+  .contact-form {
     max-width: 100%;
-    min-width: 0;stretch;
+    min-width: 0;
     width: 100%;
     padding: 16px 8px;
-  }my-contact-details,
-  .contact-form {
-  .main-nav {00%;
+  }
+
+  .main-nav {
     left: 0;
-    right: 0;100%;
-    transform: none;px 8px;
+    right: 0;
     width: 100%;
     border-radius: 0;
+    transform: none;
   }
- flex-direction: column;
+
   .main-nav ul {
     flex-direction: column;
     gap: 0;
     padding: 0;
-  } border-bottom: 1px solid #eee;
-  .main-nav li { }
+  }
 
+  .main-nav li {
+    border-bottom: 1px solid #eee;
+  }
 
-
-
-
-
-
-
-}  }    text-align: center;    display: block;    padding: 14px 0;  .main-nav a {  }    border-bottom: 1px solid #eee;  .main-nav a {
+  .main-nav a {
     padding: 14px 0;
     display: block;
     text-align: center;
