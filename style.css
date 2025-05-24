@@ -521,9 +521,20 @@ header > h2 {
   }
 
   .skills-section,
-  .about-section,
-  .projects-section,
-  .contact-section {
+  .contact-section,
+  .header-bg {
+    width: 100% !important;
+    max-width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    transform: none !important;
+    border-radius: 0 !important;
+    box-sizing: border-box !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .projects-section {
     width: 100%;
     max-width: 100%;
     margin: 20px 0 0 0;
