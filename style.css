@@ -532,7 +532,8 @@ header > h2 {
     left: 0;
     right: 0;
     transform: none;
-    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
   }
 
   .skills-list {
@@ -569,17 +570,26 @@ header > h2 {
   }
 
   .main-nav {
+    position: fixed;      /* Make it always visible */
+    top: 0;
     left: 0;
     right: 0;
-    width: 100%;
+    width: 100vw;
     border-radius: 0;
     transform: none;
+    z-index: 2000;
+    box-shadow: 0 2px 8px rgba(66,38,101,0.06);
+  }
+
+  body {
+    padding-top: 60px; /* Add space for the fixed nav */
   }
 
   .main-nav ul {
     flex-direction: column;
     gap: 0;
     padding: 0;
+    margin: 0;
   }
 
   .main-nav li {
