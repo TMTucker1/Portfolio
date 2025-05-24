@@ -574,7 +574,7 @@ header > h2 {
   }
 
   body {
-    padding-top: 60px;
+    padding-top: 120px; /* Increase this value until your name is fully visible */
     box-sizing: border-box;
   }
 
