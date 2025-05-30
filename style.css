@@ -501,6 +501,38 @@ header > h2 {
     color: #ff22b2;
 }
 
+@media (max-width: 800px) {
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+  .main-nav li {
+    border-bottom: 1px solid #eee;
+    width: 100%;
+  }
+  .main-nav a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 16px 0;
+  }
+  .main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(66,38,101,0.06);
+    border-bottom: 2px solid #422665;
+  }
+  body {
+    padding-top: 70px; /* Adjust if your nav is taller */
+  }
+}
+
 /* Recent Projects Section */
 .recent-projects-section {
     margin: 32px auto 0 auto;
