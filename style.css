@@ -502,34 +502,19 @@ header > h2 {
 }
 
 @media (max-width: 800px) {
-  .main-nav ul {
-    flex-direction: column;
-    gap: 0;
-    width: 100%;
-  }
-  .main-nav li {
-    border-bottom: 1px solid #eee;
-    width: 100%;
-  }
-  .main-nav a {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 16px 0;
-  }
   .main-nav {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
-    z-index: 1000;
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(66,38,101,0.06);
-    border-bottom: 2px solid #422665;
+    border-radius: 0;
+    z-index: 2000;
+    height: auto; /* Let it grow with content */
   }
   body {
-    padding-top: 70px; /* Adjust if your nav is taller */
+    padding-top: 220px; /* Adjust this to match the nav height on mobile */
+    box-sizing: border-box;
   }
 }
 
@@ -693,7 +678,7 @@ header > h2 {
   }
 
   body {
-    padding-top: 70px; /* Adjust if your nav is taller */
+    padding-top: 110px; /* Increase this until your H1 is fully visible */
     box-sizing: border-box;
   }
 
@@ -710,5 +695,28 @@ header > h2 {
     padding: 18px 10px;
     box-sizing: border-box;
     margin: 0 auto;
+  }
+  
+  .header-bg {
+    width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    transform: none !important;
+    border-radius: 0 !important;
+    box-sizing: border-box !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .flame-box {
+    margin: 16px auto 0 auto;
+    padding: 12px 8px;
+    width: 95vw;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  header > h2 {
+    font-size: 1.1em;
+    margin: 8px 0;
   }
 }
