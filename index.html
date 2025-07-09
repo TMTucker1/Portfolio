@@ -145,36 +145,53 @@
         <section id="contact" class="contact-section">
             <h2>Contact Me</h2>
             <div class="contact-flex-row">
-               <div class="my-contact-details">
-                    <div class="my-contact-details-inner">
-        <p><strong>Email:</strong><br>
-            <a href="mailto:tmtucke2@asu.edu">tmtucke2@asu.edu</a>
-            </p>
-            <p><strong>Phone:</strong><br>
-            <a href="tel:13142776493">(314) 277-6493</a>
-         </p>
-             </div>
-            </div>
-                <form class="contact-form" action="mailto:tmtucke2@asu.edu" method="POST" enctype="text/plain">
+                <form id="contactForm" action="https://formspree.io/f/xyzjqrdq" method="POST">
                     <div class="contact-info">
                         <label>Your Email:</label>
-                        <input type="email" name="email" placeholder="Your email address" required>
-                    </div>
-                    <div class="contact-info">
-                        <label>Your Phone:</label>
-                        <input type="tel" name="phone" placeholder="Your phone number">
+                        <input type="email" name="email" required>
                     </div>
                     <div class="contact-info">
                         <label>Your Message:</label>
-                        <textarea name="message" placeholder="Type your message here..." rows="4" required></textarea>
+                        <textarea name="message" rows="4" required></textarea>
                     </div>
                     <button type="submit" class="cta-btn">Let's Connect!</button>
                 </form>
+                <div id="formSuccess" style="display:none; color:green; margin-top:16px;">
+                    Thank you! Your message has been sent.
+                </div>
             </div>
         </section>
 
         </section>
     </main>
     <script src="scripts/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            const successMsg = document.getElementById('formSuccess');
+            if (form) {
+                form.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    const formData = new FormData(form);
+                    const action = form.getAttribute('action');
+                    const response = await fetch(action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    if (response.ok) {
+                        form.reset();
+                        successMsg.style.display = 'block';
+                    } else {
+                        successMsg.style.display = 'block';
+                        successMsg.style.color = 'red';
+                        successMsg.innerHTML = 'Oops! Something went wrong, please try again.';
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
