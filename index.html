@@ -58,40 +58,8 @@
         <!-- Recent Projects Section -->
         <section id="recent-projects" class="recent-projects-section">
             <h2>Recent Projects</h2>
-            <div class="recent-projects-cards">
-                <div class="recent-project-card" style="text-align: center; position: relative;">
-                    <a href="https://tmtucker1.github.io/Intel-Sustain-Journey/" target="_blank" class="project-link-btn">
-                        Intel- Travel through history
-                    </a>
-                    <p class="project-hover-desc">
-                        Take a look at Intel's Journey from innovation in products to innovation in the process of creation of products
-                    </p>
-                </div>
-                <div class="recent-project-card" style="text-align: center; position: relative;">
-                    <a href="https://tmtucker1.github.io/charity-water-game-final/" target="_blank" class="project-link-btn">
-                        charity:water mini Games
-                    </a>
-                    <p class="project-hover-desc">
-                        Play mini games designed to raise awareness for clean water initiatives and support charity:water's mission.
-                    </p>
-                </div>
-                <!-- New Project Card -->
-                <div class="recent-project-card" style="text-align: center; position: relative;">
-                    <a href="https://tmtucker1.github.io/07-nasa-space-explorer/" target="_blank" class="project-link-btn">
-                        NASA Space Explorer
-                    </a>
-                    <p class="project-hover-desc">
-                        Explore NASA's image and data APIs in this interactive web app—discover space photos, facts, and more!
-                    </p>
-                </div>
-                <div class="recent-project-card" style="text-align: center; position: relative;">
-                    <a href="https://tmtucker1.github.io/prj-loreal-chatbot/" target="_blank" class="project-link-btn">
-                        L’Oréal ChatBot
-                    </a>
-                    <p class="project-hover-desc">
-                        An interactive chatbot experience for L’Oréal, designed to assist users with product information and beauty tips.
-                    </p>
-                </div>
+            <div class="recent-projects-cards" id="projects-container">
+                <!-- Project cards will be injected here -->
             </div>
         </section>
 
@@ -166,6 +134,7 @@
     </main>
     <script src="scripts/main.js"></script>
     <script>
+        // Contact form handler
         document.addEventListener('DOMContentLoaded', function() {
             const form = document.getElementById('contactForm');
             const successMsg = document.getElementById('formSuccess');
@@ -191,6 +160,38 @@
                     }
                 });
             }
+
+            // Recent projects loader and hover effect
+            const projectsContainer = document.getElementById('projects-container');
+            if (projectsContainer) {
+                fetch('projects.json')
+                  .then(response => response.json())
+                  .then(projects => {
+                    projectsContainer.innerHTML = projects.map(project => `
+                      <div class="recent-project-card project-hover-card" style="text-align: center; position: relative;">
+                        <a href="${project.url}" target="_blank" class="project-link-btn">
+                          ${project.title}
+                        </a>
+                        <p class="project-hover-desc" style="display:none; position:absolute; left:50%; top:110%; transform:translateX(-50%); background:#fffbe7; color:#333; border-radius:8px; padding:12px 16px; box-shadow:0 2px 8px rgba(66,38,101,0.08); width:90%; z-index:10;">${project.description}</p>
+                      </div>
+                    `).join('');
+                  });
+            }
+
+            document.addEventListener('mouseover', function(e) {
+              const card = e.target.closest('.project-hover-card');
+              if (card) {
+                const desc = card.querySelector('.project-hover-desc');
+                if (desc) desc.style.display = 'block';
+              }
+            });
+            document.addEventListener('mouseout', function(e) {
+              const card = e.target.closest('.project-hover-card');
+              if (card) {
+                const desc = card.querySelector('.project-hover-desc');
+                if (desc) desc.style.display = 'none';
+              }
+            });
         });
     </script>
 </body>
