@@ -1,4 +1,3 @@
-<script>
 fetch('projects.json')
   .then(response => response.json())
   .then(projects => {
@@ -12,4 +11,3 @@ fetch('projects.json')
       </div>
     `).join('');
   });
-</script>
